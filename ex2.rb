@@ -1,4 +1,4 @@
-# An octothorpe in fornt of a line tells Ruby to ignore it
+# An octothorpe in front of a line tells Ruby to ignore it
 
 puts "I could have code like this. " #and an ignored comment after
 
