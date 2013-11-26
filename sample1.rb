@@ -1,5 +1,5 @@
-Sample Ruby
-By NPL
+# Sample Ruby
+# By NPL
 
 puts "What's your name? " 
 name = gets.chomp.capitalize
