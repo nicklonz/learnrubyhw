@@ -1,3 +1,6 @@
+Sample Ruby
+By NPL
+
 puts "What's your name? " 
 name = gets.chomp.capitalize
 puts "Hello #{name}, what state do you live in? "
