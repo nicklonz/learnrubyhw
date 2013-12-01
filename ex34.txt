@@ -1,0 +1,13 @@
+animals = ['bear', 'python', 'peacock', 'kangaroo', 'whale', 'platypus']
+
+The 1st animal is at 0 is a bear.
+
+The 2nd animal is at 1 is a python.
+
+The 3rd animal is at 2 is a peacock.
+
+The 4th animal is at 3 is a kangaroo.
+
+The 5th animal is at 4 is a whale.
+
+The 6th animal is at 5 is a platypus.
