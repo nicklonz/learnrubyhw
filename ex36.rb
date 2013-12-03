@@ -7,9 +7,9 @@ puts ""
 puts "Hello #{user}. I'm your Guide"
 puts ""
 puts "The rules are quite simple." 
-puts "You must enter a series of doors successfully to win."
+puts "You must complete a series of tasks to win."
 puts ""
-puts "Good Luck!"
+puts "Good Luck #{user}!"
 puts ""
 puts "Here goes: "
 sleep 1
@@ -21,27 +21,27 @@ end
 def green_room()
   puts "This room is full of pickles.  How many do you take?"
 
-  prompt; pickle_move = gets.chomp 
-  if pickle_move.include? "0" or pickle_move.include? "1"
+  prompt; next_move = gets.chomp 
+  if next_move.include? "0" or next_move.include? "1"
     how_much = next_move.to_i()
   else
-    dead("Not a vaild response.")
+    dead("You greedy bastard! But you made it out alive!")
   end
 
   if how_much < 12
-    puts "Nice, you're not greedy, you win!"
+    puts "Nice, you're not greedy, you win #{user}!"
     Process.exit(0)
   else
-    dead("You greedy bastard!")
+    dead("You greedy bastard #{user}!")
   end
 end
-
 
 def one_room()
   puts "There is a wizard here."
   puts "The wizard is sleeping."
   puts "The wizard is in front of the door."
   puts "How are you going to move the wizard?"
+  puts "Try to make noise, tickle him, or hit him and then open door."
   wizard_moved = false
 
   while true
@@ -49,11 +49,11 @@ def one_room()
 
     if next_move == "make noise"
       dead("The wizard wakes up and casts a spell on you!")
-    elsif next_move == "tickle" and not wizard_moved
+    elsif next_move == "tickle him" and not wizard_moved
       puts "The wizard has moved from the door. You can go through it now."
       wizard_moved = true
-    elsif next_move == "hit" and wizard_moved
-      dead("The wizard gets pissed and turns you inot stone!")
+    elsif next_move == "hit him" and wizard_moved
+      dead("The wizard gets pissed and turns you into stone!")
     elsif next_move == "open door" and wizard_moved
       green_room()
     else
@@ -79,7 +79,7 @@ def two_room()
 end
 
 def dead(why)
-  puts "#{why}  Good job!"
+  puts "#{why} Great job!"
   Process.exit(0)
 end
 
@@ -95,7 +95,7 @@ def start()
   elsif next_move == "3"
     two_room()
   else
-    dead("You realize the room you enter it to sell you a time share...in eternity!")
+    dead("You realize that the room you enter it to sell you a time share...in eternity!")
   end
 end
 
